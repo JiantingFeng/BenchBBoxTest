@@ -62,6 +62,8 @@
   
     
     
+      
+    
     
     
     
@@ -116,7 +118,33 @@
     </div>
     
       
+        <form class="md-header__option" data-md-component="palette">
+  
     
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -164,7 +192,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/yourusername/BenchBBoxTest" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/jiantingfeng/BenchBBoxTest" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
@@ -322,7 +350,7 @@
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/yourusername/BenchBBoxTest" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/jiantingfeng/BenchBBoxTest" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
@@ -429,29 +457,14 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Basic Usage">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#text-generation" class="md-nav__link">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples-with-different-data-types" class="md-nav__link">
     <span class="md-ellipsis">
-      Text Generation
+      Examples with Different Data Types
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#using-openai-api" class="md-nav__link">
-    <span class="md-ellipsis">
-      Using OpenAI API
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -873,62 +886,51 @@
 
 <h1 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h1>
 <p>This guide will help you get started with BenchBBoxTest.</p>
+<p>For a quick overview and basic usage examples, please also refer to the main <a href="../README.md">README.md</a> file.</p>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
-<p>You can install BenchBBoxTest using pip:</p>
-<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>benchbboxtest
-</code></pre></div>
-<p>Or you can install from source:</p>
-<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/yourusername/BenchBBoxTest.git
+<div class="highlight"><pre><span></span><code><span class="c1"># Clone the repository</span>
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/jiantingfeng/BenchBBoxTest.git
 <span class="nb">cd</span><span class="w"> </span>BenchBBoxTest
+
+<span class="c1"># Install dependencies</span>
+pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+
+<span class="c1"># Install the package in development mode</span>
 pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.
 </code></pre></div>
+<p>Alternatively, you can install the latest release directly using pip:</p>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>benchbboxtest
+</code></pre></div>
 <h2 id="basic-usage">Basic Usage<a class="headerlink" href="#basic-usage" title="Permanent link">&para;</a></h2>
-<h3 id="text-generation">Text Generation<a class="headerlink" href="#text-generation" title="Permanent link">&para;</a></h3>
-<p>BenchBBoxTest provides several text generation tools powered by language models:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">benchbboxtest.datasets.text</span><span class="w"> </span><span class="kn">import</span> <span class="n">LLMGenerator</span><span class="p">,</span> <span class="n">TextGenerator</span>
+<p>Here's a basic example demonstrating how to use BenchBBoxTest for conditional independence testing:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">benchbboxtest.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">ConditionalRandomizationTest</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">benchbboxtest.datasets.simulation</span><span class="w"> </span><span class="kn">import</span> <span class="n">LinearGaussianGenerator</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">benchbboxtest.evaluation</span><span class="w"> </span><span class="kn">import</span> <span class="n">simultaneous_evaluation</span><span class="p">,</span> <span class="n">plot_evaluation_results</span>
 
-<span class="c1"># Initialize a language model generator</span>
-<span class="n">llm</span> <span class="o">=</span> <span class="n">LLMGenerator</span><span class="p">(</span><span class="n">model_name</span><span class="o">=</span><span class="s2">&quot;gpt2&quot;</span><span class="p">)</span>
+<span class="c1"># Create a data generator</span>
+<span class="n">data_gen</span> <span class="o">=</span> <span class="n">LinearGaussianGenerator</span><span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 
-<span class="c1"># Generate text based on a prompt</span>
-<span class="n">texts</span> <span class="o">=</span> <span class="n">llm</span><span class="o">.</span><span class="n">generate_text</span><span class="p">(</span>
-    <span class="n">prompt</span><span class="o">=</span><span class="s2">&quot;Write a paragraph about machine learning.&quot;</span><span class="p">,</span>
-    <span class="n">max_length</span><span class="o">=</span><span class="mi">150</span><span class="p">,</span>
-    <span class="n">temperature</span><span class="o">=</span><span class="mf">0.7</span>
+<span class="c1"># Create a conditional independence test</span>
+<span class="n">cit</span> <span class="o">=</span> <span class="n">ConditionalRandomizationTest</span><span class="p">(</span><span class="n">n_permutations</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+
+<span class="c1"># Evaluate the test across different sample sizes</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">simultaneous_evaluation</span><span class="p">(</span>
+    <span class="n">test_method</span><span class="o">=</span><span class="n">cit</span><span class="p">,</span>
+    <span class="n">data_generator</span><span class="o">=</span><span class="n">data_gen</span><span class="p">,</span>
+    <span class="n">n_samples_list</span><span class="o">=</span><span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">1000</span><span class="p">],</span>
+    <span class="n">n_trials</span><span class="o">=</span><span class="mi">10</span>
 <span class="p">)</span>
 
-<span class="c1"># Create a text generator for conditional independence testing</span>
-<span class="n">generator</span> <span class="o">=</span> <span class="n">TextGenerator</span><span class="p">(</span><span class="n">llm_generator</span><span class="o">=</span><span class="n">llm</span><span class="p">)</span>
-
-<span class="c1"># Generate data under the null hypothesis</span>
-<span class="n">null_data</span> <span class="o">=</span> <span class="n">generator</span><span class="o">.</span><span class="n">generate_null</span><span class="p">(</span>
-    <span class="n">n_samples</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
-    <span class="n">temperature</span><span class="o">=</span><span class="mf">0.8</span>
-<span class="p">)</span>
-
-<span class="c1"># Generate data under the alternative hypothesis</span>
-<span class="n">alt_data</span> <span class="o">=</span> <span class="n">generator</span><span class="o">.</span><span class="n">generate_alternative</span><span class="p">(</span>
-    <span class="n">n_samples</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
-    <span class="n">dependency_strength</span><span class="o">=</span><span class="mf">0.7</span>
-<span class="p">)</span>
+<span class="c1"># Plot the evaluation results (e.g., power curve)</span>
+<span class="n">plot_evaluation_results</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
 </code></pre></div>
-<h3 id="using-openai-api">Using OpenAI API<a class="headerlink" href="#using-openai-api" title="Permanent link">&para;</a></h3>
-<p>For more powerful text generation, you can use the OpenAI API integration:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">benchbboxtest.datasets.text</span><span class="w"> </span><span class="kn">import</span> <span class="n">OpenAIGenerator</span>
-
-<span class="c1"># Initialize the OpenAI generator with your API key</span>
-<span class="c1"># It will use the OPENAI_API_KEY environment variable if not provided</span>
-<span class="n">generator</span> <span class="o">=</span> <span class="n">OpenAIGenerator</span><span class="p">(</span>
-    <span class="n">api_key</span><span class="o">=</span><span class="s2">&quot;your-api-key&quot;</span><span class="p">,</span>  <span class="c1"># or set OPENAI_API_KEY environment variable</span>
-    <span class="n">model</span><span class="o">=</span><span class="s2">&quot;gpt-3.5-turbo&quot;</span>
-<span class="p">)</span>
-
-<span class="c1"># Generate text</span>
-<span class="n">texts</span> <span class="o">=</span> <span class="n">generator</span><span class="o">.</span><span class="n">generate_text</span><span class="p">(</span>
-    <span class="n">prompt</span><span class="o">=</span><span class="s2">&quot;Explain the concept of conditional independence.&quot;</span><span class="p">,</span>
-    <span class="n">max_tokens</span><span class="o">=</span><span class="mi">150</span>
-<span class="p">)</span>
-</code></pre></div>
+<h2 id="examples-with-different-data-types">Examples with Different Data Types<a class="headerlink" href="#examples-with-different-data-types" title="Permanent link">&para;</a></h2>
+<p>BenchBBoxTest also supports benchmarking with other data modalities:</p>
+<ul>
+<li><strong>Image Data:</strong> Use <code>CelebAMaskGenerator</code> (<code>benchbboxtest/datasets/image/celebamask.py</code>) for CIT tasks involving facial attributes from the CelebAMask-HQ dataset.</li>
+<li><strong>Text Data:</strong> Use generators like <code>LLMGenerator</code> or <code>EHRTextGenerator</code> (<code>benchbboxtest/datasets/text/</code>) to create text-based scenarios. See the main <code>README.md</code> for a detailed example using <code>EHRTextGenerator</code>.</li>
+</ul>
 <h2 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
 <p>Refer to the User Guide and API Reference for more detailed information on the various modules and functionality provided by BenchBBoxTest. </p>
 
