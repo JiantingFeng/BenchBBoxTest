@@ -19,7 +19,7 @@ Set up your development environment:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/BenchBBoxTest.git
+git clone https://github.com/jiantingfeng/BenchBBoxTest.git
 cd BenchBBoxTest
 
 # Create a virtual environment

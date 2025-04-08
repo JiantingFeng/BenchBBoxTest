@@ -26,7 +26,7 @@ This will install the package and all its required dependencies.
 For the latest features or to contribute to development, you can install from source:
 
 ```bash
-git clone https://github.com/yourusername/BenchBBoxTest.git
+git clone https://github.com/jiantingfeng/BenchBBoxTest.git
 cd BenchBBoxTest
 pip install -e .
 ```

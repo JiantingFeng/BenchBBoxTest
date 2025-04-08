@@ -14,7 +14,7 @@ Conditional Independence Testing (CIT) is a fundamental task in causal inference
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/BenchBBoxTest.git
+git clone https://github.com/jiantingfeng/BenchBBoxTest.git
 cd BenchBBoxTest
 
 # Install dependencies

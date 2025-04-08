@@ -13,7 +13,7 @@ pip install benchbboxtest
 Or you can install from source:
 
 ```bash
-git clone https://github.com/yourusername/BenchBBoxTest.git
+git clone https://github.com/jiantingfeng/BenchBBoxTest.git
 cd BenchBBoxTest
 pip install -e .
 ```

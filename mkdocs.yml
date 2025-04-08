@@ -1,6 +1,6 @@
 site_name: BenchBBoxTest
 site_description: A Python package for benchmarking black-box testing methods
-repo_url: https://github.com/yourusername/BenchBBoxTest
+repo_url: https://github.com/jiantingfeng/BenchBBoxTest
 theme:
   name: material
   palette:
