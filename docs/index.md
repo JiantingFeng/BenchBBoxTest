@@ -1,38 +1,65 @@
 # BenchBBoxTest
 
-A Python package for benchmarking black-box testing methods.
+A Python package for benchmarking black-box conditional independence testing methods across multiple data modalities.
 
 ## Overview
 
-BenchBBoxTest provides tools and utilities for generating synthetic datasets and evaluating black-box testing methodologies. The package includes modules for:
+Conditional Independence Testing (CIT) is a fundamental task in causal inference and statistical analysis. BenchBBoxTest provides standardized benchmarks and data generators for evaluating CIT methods across different types of data:
 
-- **Text Generation**: Using language models to generate text datasets
-- **Image Generation**: Creating image datasets with specific properties
-- **Simulation**: Simulating data from various distributions
-- **Evaluation**: Tools for evaluating testing methods
+1.  **Simulation data**: Linear Gaussian and Post-nonlinear models.
+2.  **Image data**: Using the CelebAMask-HQ dataset with facial attributes. See [Image Data Generation](datasets/image.md).
+3.  **Text data**: Using Large Language Models (LLMs) and scenarios like synthetic EHR notes. See [Text Data Generation](datasets/text.md).
+
+The package includes tools for data generation, CIT method implementations (like CRT), and evaluation utilities.
 
 ## Installation
 
+```bash
+# Clone the repository
+git clone https://github.com/jiantingfeng/BenchBBoxTest.git
+cd BenchBBoxTest
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Install the package in development mode
+pip install -e .
+```
+
+Alternatively, install the latest release via pip:
 ```bash
 pip install benchbboxtest
 ```
 
 ## Quick Start
 
+Here's a basic example demonstrating CIT evaluation:
+
 ```python
-from benchbboxtest.datasets.text import LLMGenerator
+import numpy as np
+from benchbboxtest.core import ConditionalRandomizationTest
+from benchbboxtest.datasets.simulation import LinearGaussianGenerator
+from benchbboxtest.evaluation import simultaneous_evaluation, plot_evaluation_results
 
-# Initialize a language model generator
-generator = LLMGenerator(model_name="gpt2")
+# Create a data generator (simulation data)
+data_gen = LinearGaussianGenerator(d=5)
 
-# Generate text based on a prompt
-text = generator.generate_text(
-    prompt="This is an example of text generation",
-    max_length=100
+# Create a conditional independence test method
+cit = ConditionalRandomizationTest(n_permutations=100)
+
+# Evaluate the test
+results = simultaneous_evaluation(
+    test_method=cit,
+    data_generator=data_gen,
+    n_samples_list=[100, 200, 500, 1000],
+    n_trials=10
 )
 
-print(text)
+# Plot the results (e.g., power curve)
+plot_evaluation_results(results)
 ```
+
+For more examples, including text and image data, see the [Getting Started](getting-started.md) guide.
 
 ## License
 

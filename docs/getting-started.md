@@ -2,77 +2,62 @@
 
 This guide will help you get started with BenchBBoxTest.
 
+For a quick overview and basic usage examples, please also refer to the main [README.md](../README.md) file.
+
 ## Installation
 
-You can install BenchBBoxTest using pip:
+```bash
+# Clone the repository
+git clone https://github.com/jiantingfeng/BenchBBoxTest.git
+cd BenchBBoxTest
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Install the package in development mode
+pip install -e .
+```
+
+Alternatively, you can install the latest release directly using pip:
 
 ```bash
 pip install benchbboxtest
 ```
 
-Or you can install from source:
-
-```bash
-git clone https://github.com/jiantingfeng/BenchBBoxTest.git
-cd BenchBBoxTest
-pip install -e .
-```
-
 ## Basic Usage
 
-### Text Generation
-
-BenchBBoxTest provides several text generation tools powered by language models:
+Here's a basic example demonstrating how to use BenchBBoxTest for conditional independence testing:
 
 ```python
-from benchbboxtest.datasets.text import LLMGenerator, TextGenerator
+import numpy as np
+from benchbboxtest.core import ConditionalRandomizationTest
+from benchbboxtest.datasets.simulation import LinearGaussianGenerator
+from benchbboxtest.evaluation import simultaneous_evaluation, plot_evaluation_results
 
-# Initialize a language model generator
-llm = LLMGenerator(model_name="gpt2")
+# Create a data generator
+data_gen = LinearGaussianGenerator(d=5)
 
-# Generate text based on a prompt
-texts = llm.generate_text(
-    prompt="Write a paragraph about machine learning.",
-    max_length=150,
-    temperature=0.7
+# Create a conditional independence test
+cit = ConditionalRandomizationTest(n_permutations=100)
+
+# Evaluate the test across different sample sizes
+results = simultaneous_evaluation(
+    test_method=cit,
+    data_generator=data_gen,
+    n_samples_list=[100, 200, 500, 1000],
+    n_trials=10
 )
 
-# Create a text generator for conditional independence testing
-generator = TextGenerator(llm_generator=llm)
-
-# Generate data under the null hypothesis
-null_data = generator.generate_null(
-    n_samples=100,
-    temperature=0.8
-)
-
-# Generate data under the alternative hypothesis
-alt_data = generator.generate_alternative(
-    n_samples=100,
-    dependency_strength=0.7
-)
+# Plot the evaluation results (e.g., power curve)
+plot_evaluation_results(results)
 ```
 
-### Using OpenAI API
+## Examples with Different Data Types
 
-For more powerful text generation, you can use the OpenAI API integration:
+BenchBBoxTest also supports benchmarking with other data modalities:
 
-```python
-from benchbboxtest.datasets.text import OpenAIGenerator
-
-# Initialize the OpenAI generator with your API key
-# It will use the OPENAI_API_KEY environment variable if not provided
-generator = OpenAIGenerator(
-    api_key="your-api-key",  # or set OPENAI_API_KEY environment variable
-    model="gpt-3.5-turbo"
-)
-
-# Generate text
-texts = generator.generate_text(
-    prompt="Explain the concept of conditional independence.",
-    max_tokens=150
-)
-```
+*   **Image Data:** Use `CelebAMaskGenerator` (`benchbboxtest/datasets/image/celebamask.py`) for CIT tasks involving facial attributes from the CelebAMask-HQ dataset.
+*   **Text Data:** Use generators like `LLMGenerator` or `EHRTextGenerator` (`benchbboxtest/datasets/text/`) to create text-based scenarios. See the main `README.md` for a detailed example using `EHRTextGenerator`.
 
 ## Next Steps
 
